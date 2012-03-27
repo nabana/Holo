@@ -1,10 +1,13 @@
-require(['../src/Holo.js'], function (holo) {
+require(['../src/Holo.js'], function ( holo ) {
+    "use strict";
 
     console.log('Executing test case 1...');
 
     var generateDummyComponents = function(count) {
 
-        for (var i=0; i<count; i++) {
+        var i;
+
+        for (i=0; i<count; i++) {
 
         }
 
