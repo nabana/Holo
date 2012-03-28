@@ -1,20 +1,29 @@
-require(['../src/Holo.js'], function ( holo ) {
+require([
+    '../src/holo.js',
+    '../src/utils.js'], function ( Holo, Utils ) {
     "use strict";
 
-    console.log('Executing test case 1...');
+    window.DEBUG = true;
 
-    var generateDummyComponents = function(count) {
+    // shorthand
+    var trace = Utils.trace;
+
+    trace('Executing test case 1...');
+
+    var generateDummyComponents = function( count ) {
 
         var i;
 
-        for (i=0; i<count; i++) {
-
+        for ( i=0; i<count; i++ ) {
+            trace( i );
         }
 
     };
 
-    generateDummyComponents(1000);
+    generateDummyComponents( 1000 );
 
-    console.log('Executing test case DONE.');
+    Holo.initialize();
+
+    trace( 'Executing test case DONE.' );
 
 });

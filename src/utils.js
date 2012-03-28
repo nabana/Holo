@@ -4,20 +4,19 @@
  * @author Naba
  */
 
+define([
+    'underscore'
+], function( _ ){
 
-var utils = {};
-
-(function (global) {
     "use strict";
 
-    var _ = global._,
-        console = global.console;
+    var console = window.console;
 
 
     /**
      *    Traces a msg on the console if available
      */
-    utils.trace = function (msg, mode) {
+    var trace = function (msg, mode) {
 
         var today = new Date(),
             h = today.getHours(),
@@ -26,7 +25,7 @@ var utils = {};
             ms = today.getMilliseconds(),
             messageString = '[' + h + ':' + m + ':' + s + '.' + ms + '] ' + msg;
 
-        if (global.DEBUG === true) {
+        if ( window.DEBUG === true ) {
             if (_.isFunction(console)) {
 
                 if (mode == 'error' && _.isFunction(console.error)) {
@@ -38,4 +37,10 @@ var utils = {};
         }
     };
 
-}( window ));
+    return {
+
+        trace: trace
+
+    };
+
+});
