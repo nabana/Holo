@@ -7,7 +7,6 @@
 define([
     'underscore'
 ], function( _ ){
-
     "use strict";
 
     var console = window.console;
@@ -26,7 +25,7 @@ define([
             messageString = '[' + h + ':' + m + ':' + s + '.' + ms + '] ' + msg;
 
         if ( window.DEBUG === true ) {
-            if (_.isFunction(console)) {
+            if ( console ) {
 
                 if (mode == 'error' && _.isFunction(console.error)) {
                     console.error(messageString);

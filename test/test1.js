@@ -1,6 +1,8 @@
 require([
     '../src/holo.js',
-    '../src/utils.js'], function ( Holo, Utils ) {
+    '. qutils.js'
+
+], function ( Holo, Utils ) {
     "use strict";
 
     window.DEBUG = true;
@@ -20,7 +22,7 @@ require([
 
     };
 
-    generateDummyComponents( 1000 );
+    generateDummyComponents( 10 );
 
     Holo.initialize();
 

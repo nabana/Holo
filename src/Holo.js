@@ -3,7 +3,10 @@ require.config({
     paths: {
         order: '../src/order',
         jquery: '../src/libs/jquery/jquery-1.7.2.min',
-        underscore: '../src/libs/underscore/underscore-min',
+
+        _underscore: '../src/libs/underscore/underscore-min',
+        underscore: '../src/libs/underscore/underscore_wrapper',
+
         utils: '../src/utils'
     }
 
