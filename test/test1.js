@@ -1,7 +1,16 @@
-require([
-    '../src/holo.js',
-    '. qutils.js'
+/*global window, navigator, document, importScripts, jQuery, setTimeout, opera */
 
+require.config({
+    baseUrl: '../src/',
+    paths: {
+        utils: 'lib/utils'
+    }
+
+});
+
+require([
+    'holo',
+    'utils'
 ], function ( Holo, Utils ) {
     "use strict";
 

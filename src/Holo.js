@@ -1,31 +1,36 @@
 // requirejs configuration
 require.config({
+    baseUrl: '../src/',
     paths: {
-        order: '../src/order',
-        jquery: '../src/libs/jquery/jquery-1.7.2.min',
+        order: 'lib/order',
+        jquery: 'lib/jquery/jquery-1.7.2.min',
 
-        _underscore: '../src/libs/underscore/underscore-min',
-        underscore: '../src/libs/underscore/underscore_wrapper',
+        _underscore: 'lib/underscore/underscore-min',
+        underscore: 'lib/underscore/underscore_wrapper',
 
-        utils: '../src/utils'
+        utils: 'lib/utils'
     }
 
 });
 
-define([
-    'order!jquery',
-    'order!underscore',
-    'order!utils'
-], function($, _, Utils){
+define(
+    [
+        'order!jquery',
+        'order!underscore',
+        'utils'
+    ],
 
-    return {
+    function($, _, Utils){
 
-        initialize: function() {
+        return {
 
-            Utils.trace( 'Holo is initializing' );
+            initialize: function() {
 
-        }
+                Utils.trace( 'Holo is initializing' );
 
-    };
+            }
 
-});
+        };
+
+    }
+);

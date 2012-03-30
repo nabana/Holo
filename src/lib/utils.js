@@ -34,6 +34,7 @@ define([
                 }
             }
         }
+
     };
 
     return {
